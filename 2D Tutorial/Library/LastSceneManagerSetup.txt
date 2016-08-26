@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/WalkTest.unity
+  isLoaded: 1
+  isActive: 1

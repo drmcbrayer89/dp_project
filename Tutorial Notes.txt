@@ -1,0 +1,38 @@
+How to make a 2D platformer.
+
+Video Tutorial 1
+- When creating a new project, you can select 2D or 3D and can select packages for the project.
+- Sorting Layers in the renderer render objects on the top layer first
+- Rigidbody 2D Collider
+- "What is ground?" selection allows you to choose which layers are the ground.
+- Can drag C# scripts into the Inspector for an Object to add that functionality to that object.
+
+Video Tutorial 5
+- Be sure that at the top left of the project, you have "Pivot" instead of "Center."  If you have "Center" up there, that means all pivots will be centered in the objects, instead of pivots you set.
+
+Video Tutorial 6
+- When doing parallax and tiling, it helps to have each actual background under a container
+	- The container will spawn new buddies under the container
+	- As long as the container, instead of the background, is place in our Transform array, each child buddy will inherit the parallax logic, instead of just one
+- Sprite colors can be adjusted.  It defaults to Compression, which will reduce file size but fade out some color.  
+- Physics materials for 2D can be applied to different colliders.  If friction is turned to 0, the player will not get stuck to a collider.
+
+Video Tutorial 7
+- Animation can be accomplished by flow chart
+	- Flow from one state to the next, can also use an "Any State" initiation (good for jump animations).
+	- Animation may need to be done by hand, can put sprites into an animation property
+- Use Graphics -> Sprite for 2D animations
+
+Video Tutorial 8
+- When doing a LayerMask, you are looking at what you want to hit.
+	- Make it hit everything, then deselect layers that are not targets
+	- Be sure to remove the Player layer, or else you will hit yourself
+- Using Input.mousePosition, you can create vectors and then multiply them by scalars for the distance of your projectile
+- Debug.DrawLine is useful for seeing how the fire vector works, but you need to enable "Gizmos" in the top right of your Game window when it's running to see them
+- Under Edit -> Project Settings -> Inputs, you can see the name of inputs and modify their properties.  When using GetButton() and similar methods, you need to know these names
+
+Video Tutoirial 9
+- Can create prefabs by dragging GameObjects you have created into the Asset window.  
+- Additive Particles may not always have the color you want over certain textures.
+- Remember to include garbage collection.
+- Bullet trail scripts should be put on the prefab itself, there isn't a game object necessary until firing is actually done.
